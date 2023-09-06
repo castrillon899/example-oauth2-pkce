@@ -3,6 +3,10 @@ Este es un ejemplo de cómo utilizar la autenticación OAuth2 para clientes Java
 
 El método "none" indica que no se debe utilizar ningún método de autenticación para el cliente, lo que significa que el cliente no proporciona ninguna prueba de su identidad al solicitar el token de acceso. Esto puede ser un riesgo de seguridad, ya que cualquier persona podría solicitar un token de acceso sin autenticarse adecuadamente.
 
+Por razones de seguridad, Spring Security no permite el uso del método "none" para el flujo de autorización y el refresco de token en OAuth 2.0. En su lugar, se requiere que el cliente proporcione algún tipo de autenticación, como un secreto de cliente (client_secret) o un código de autorización (authorization_code), para garantizar la seguridad de la aplicación.
+
+Si necesitas utilizar el método "none" para OAuth 2.0 en tu aplicación Spring Security, deberás personalizar la configuración y anular la configuración predeterminada. Sin embargo, esto puede introducir vulnerabilidades de seguridad y se recomienda evaluar cuidadosamente los riesgos antes de habilitar este método de autenticación no seguro.
+
 
 
 ## Introducción
