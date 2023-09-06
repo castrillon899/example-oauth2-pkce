@@ -1,6 +1,10 @@
 # Ejemplo de OAuth2 con PKCE
 Este es un ejemplo de cómo utilizar la autenticación OAuth2 para clientes JavaScript. Es importante tener en cuenta que este enfoque no se considera completamente seguro, ya que no implementa ningún método de autenticación en el lado de la aplicación del cliente.
 
+El método "none" indica que no se debe utilizar ningún método de autenticación para el cliente, lo que significa que el cliente no proporciona ninguna prueba de su identidad al solicitar el token de acceso. Esto puede ser un riesgo de seguridad, ya que cualquier persona podría solicitar un token de acceso sin autenticarse adecuadamente.
+
+
+
 ## Introducción
 
 En este ejemplo, el cliente envía code_challenge al servidor OAuth2 como parte del intercambio de tokens. A continuación, se proporciona un ejemplo de code_challenge y code_verifier:
